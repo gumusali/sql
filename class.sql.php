@@ -21,18 +21,6 @@
 
 			# settings
 			self::set_charset();
-			self::settings();
-		}
-
-		# settings
-		public function settings() {
-			$query = $this->pdo->prepare("SELECT * FROM settings");
-			$query->execute();
-			$config = $query->fetchAll(PDO::FETCH_ASSOC);
-
-			foreach($config as $c) {
-				define($c['setting'], $c['value']);
-			}
 		}
 
 		# select
