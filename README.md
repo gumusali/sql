@@ -29,3 +29,39 @@ Creates the query: `DELETE FROM $from`
 Creates the query if `$multiple` is false: `INSERT INTO $into($columns) VALUES($values)`
 if `$multiple` is true creates `INSERT INTO $into($columns) VALUES $values` so you can add multiple rows at once
 
+### W($condition)
+Adds `WHERE $condition` phrase to query
+
+### O($order)
+Adds `ORDER BY $order` phrase to query
+
+### L($limit)
+Adds `LIMIT $limit` phrase to query
+
+### LK($like)
+Adds `LIKE $like` phrase to query
+
+### G($group)
+Adds `GROUP BY $group` phrase to query
+
+### B($begin, $end)
+Adds `BETWEEN $begin AND $end` phrase to query
+
+### ON($on)
+Adds `ON $on` phrase to query
+
+### J($table, $type = 'INNER')
+Adds `$type JOIN $table` phrase to query
+
+### F($free, $is_data = true)
+Use `$free` as query. If any data will be fetched `$is_data` must be true
+
+### A($add)
+Adds `$add` phrase to query
+
+### set_charset($names = 'utf8')
+Sets charset.
+
+### print_query($return = false)
+If return is true, function returns the crated query. Otherwise prints query with echo
+
